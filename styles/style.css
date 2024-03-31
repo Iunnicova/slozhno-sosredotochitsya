@@ -1,5 +1,335 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+/* не знаю нужно или нет
+Сделаем так, чтобы значение переменных в body изменялось автоматически */
+/* @media (prefers-color-scheme: dark) {
+  body {
+        --main-text-color: #ffffff;
+        --main-background-color: #152028;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    --main-text-color: #152028;
+    --main-background-color: #ffffff;
+  }
+} */
+
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+	background-color: var(--background-color);
+}
+
+.visually-hidden {
+	position: absolute;
+	inline-size: 1px;
+	block-size: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	white-space: nowrap;
+}
+
+.header {
+	display: grid;
+	grid-template-columns: 1fr;
+	position: relative;
+	background: var(--header-background);
+	width: 100%;
+	min-height: 668px;
+	padding: 9px 10px;
+}
+
+.decorated-zone::after {
+	content: '';
+	width: 25px;
+	height: 25px;
+	border-bottom: 1px solid var(--accent-color);
+	border-left: 1px solid var(--accent-color);
+	align-self: flex-end;
+}
+
+.decorated-zone::before {
+	content: '';
+	width: 25px;
+	height: 25px;
+	border-top: 1px solid var(--accent-color);
+	border-right: 1px solid var(--accent-color);
+	justify-self: flex-end;
+}
+
+.header__element {
+	display: var(--decoration-elem);
+	position: absolute;
+	top: 10px;
+	right: 19px;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 25px;
+	color: var(--accent-color);
+	text-transform: uppercase;
+}
+
+.header__element::after {
+	display: inline-block;
+	content: '';
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	background: var(--accent-color);
+	margin-left: 10px;
+	box-shadow: 0px 0px 4px 2px var(--accent-color);
+}
+
+button:focus {
+	outline: none;
+}
+
+.header__theme-menu {
+	justify-self: end;
+	padding-top: 37px;
+}
+
+/* все кнопки */
+.header__theme-menu-list {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.header__theme-menu-list:focus-visible {
+	width: 104px;
+	height: 1px;
+	top: 147px;
+	background: var(--accent-color);
+}
+
+.header__theme-menu-item {
+	min-width: 44px;
+	text-align: center;
+	color: var(--accent-color);
+}
+
+/* + общее кнопка */
+.header__theme-menu-button {
+	display: flex;
+	align-items: center;
+	justify-items: center;
+	min-width: 70px;
+	height: 26px;
+	border: 1px solid transparent;
+	background: transparent;
+	text-transform: lowercase;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 18px;
+	padding: 0px 13px;
+	cursor: pointer;
+}
+
+/* день */
+.header__theme-menu-button_type_light:hover {
+	border: 1px solid var(--border-color);
+}
+
+.header__theme-menu-button_type_light:focus-visible {
+	border-bottom: 1px solid var(--accent-color);
+}
+
+/* активная */
+.header__theme-menu-button_active {
+	border: 1px solid var(--accent-color);
+	pointer-events: none;
+}
+
+.header__theme-menu-button_type_auto:hover {
+	border: 1px solid var(--border-color);
+}
+
+.header__theme-menu-button_type_auto:focus-visible {
+	border-bottom: 1px solid var(--accent-color);
+}
+
+/* неон */
+.header__theme-menu-button_type_dark:hover {
+	border: 1px solid var(--border-color);
+}
+
+.header__theme-menu-button_type_dark:focus-visible {
+	border-bottom: 1px solid var(--accent-color);
+}
+
+.header__article {
+	padding-bottom: 28px;
+}
+
+.header__title {
+	font-size: clamp(7.25rem, 7.17rem + 0.3413vw, 7.3125rem);
+	font-weight: 700;
+	line-height: 95.7px;
+	color: var(--main-title);
+	padding: 65px 0 55px;
+	text-shadow: 4px 4px 0 var(--header-shadow);
+}
+
+.header__title-text {
+	max-width: 557px;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 23.4px;
+	color: #000028;
+	background-color: var(--decorative-background);
+}
+
+/* main */
+
+.main {
+	display: flex;
+	flex-direction: column;
+	row-gap: 50px;
+	color: var(--info-text);
+	opacity: 0px;
+	width: 100%;
+	padding: 40px 10px;
+}
+
+.info {
+	display: grid;
+	grid-template-columns: 1fr;
+	row-gap: 20px;
+}
+
+.info__title {
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 23.4px;
+	color: var(--accent-color);
+
+}
+
+.info__wrapper {
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+}
+
+.info__subtitle {
+	background: var(--decorative-background);
+	color: var(--main-text);
+}
+
+.info__text {
+color: var(--info-text);
+font-size: 18px;
+font-weight: 400;
+line-height: 23.4px;
+}
+
+.info__link {
+	
+}
+
+.info__recommendation {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 23.4px;
+	background: var(--decorative-background);
+	color: var(--main-text);
+	
+}
+
+.info__cards {}
+
+.cards__one {}
+
+.cards__two {}
+
+.cards__three {}
+
+.cards__four {}
+
+.cards__five {}
+
+
+
+
+@media screen and (min-width: 768px) {
+	.header {
+		min-height: 1024px;
+		padding: 20px 20px 20px 0;
+	}
+
+	.decorated-zone::after {
+		margin-left: 20px;
+	}
+
+	.header__element {
+		top: 20px;
+		right: 29px;
+	}
+
+	.header__theme-menu {
+		padding-top: 146px;
+	}
+
+	.header__article {
+		display: flex;
+		flex-direction: column;
+		align-items: end;
+		padding-bottom: 137px;
+	}
+
+	.header__title {
+		font-size: clamp(7.5rem, 7.3125rem + 0.3906vw, 7.5625rem);
+		align-self: flex-start;
+		padding: 173px 0 162px;
+	}
+
+	.header__title-text {
+		max-width: 364px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.header {
+		grid-template-columns: 1fr auto;
+		min-height: 768px;
+		padding: 20px 20px 20px 0;
+	}
+
+	.decorated-zone::before {
+		order: 1;
+	}
+
+	.decorated-zone::after {
+		order: 3;
+	}
+
+	.header__title {
+		font-size: clamp(9.8125rem, 9.8073rem + 0.0108vw, 9.875rem);
+		padding: 290px 0 129px;
+	}
+
+	.header__title-text {
+		max-width: 491px;
+	}
+
+	.header__theme-menu {
+		justify-self: center;
+		height: max-content;
+		margin-left: 47px;
+		padding-top: 0;
+	}
+
+	.header__theme-menu-list {
+		flex-direction: row;
+		align-items: center;
+		column-gap: 10px;
+	}
+
+	.header__article {
+		grid-column: 1 / span 2;
+		padding-bottom: 92px;
+		order: 2;
+	}
 }

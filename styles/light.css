@@ -5,8 +5,18 @@
 */
 
 .page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
+	/* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+	--background-color: #fff1f7;
+	--accent-color: #353430;
+	--border-color: #32312d66;
+	--main-text: #353430;
+	--header-background: url(../images/cover-image-light.png) center / cover no-repeat;
+	--main-title: #ffc2e6;
+	--decoration-elem: none;
+	--decorative-background: #ff8dcb;
+	--info-text: #353430;
+	;
 }

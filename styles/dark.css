@@ -8,5 +8,15 @@
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
+    
   */
+  --background-color: #000028;
+  --accent-color: #ff0070;
+  --border-color: #ff007066;
+  --main-text: #000028;
+  --header-background: url(../images/cover-image-dark.png) center / cover no-repeat;
+  --main-title: #db00ff;
+  --decoration-elem: inline-block;
+  --decorative-background: #ff0070;
+	--info-text: #F1B2CE;
 }

@@ -1,12 +1,12 @@
 .page.theme_light {
-	--background-color: #fff1f7;
-	--accent-color: #353430;
-	--border-color: #32312d66;
-	--main-text: #353430;
-	--header-background: url(../images/cover-image-light.png) center / cover no-repeat;
-	--main-title: #ffc2e6;
-	--decoration-elem: none;
-	--decorative-background: #ff8dcb;
-	--info-text: #353430;
-	;
+  --background-color: #fff1f7;
+  --accent-color: #353430;
+  --hover-color: #32312d66;
+  --main-text: #353430;
+  --header-background: url(../images/cover-image-light.png) center / cover
+    no-repeat;
+  --main-title: #ffc2e6;
+  --decoration-elem: none;
+  --decorative-background: #ff8dcb;
+  --info-text: #353430;
 }

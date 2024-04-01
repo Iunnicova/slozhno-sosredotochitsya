@@ -1,12 +1,13 @@
 :root {
-	--header-shadow: #ff0070;
-	--background-color: #000028;
-	--accent-color: #ff0070;
-	--border-color: #ff007066;
-	--main-text: #000028;
-	--header-background: url(../images/cover-image-dark.png) center / cover no-repeat;
-	--main-title: #db00ff;
-	--decoration-elem: inline-block;
-	--decorative-background: #ff0070;
-	--info-text: #F1B2CE;
+  --header-shadow: #ff0070;
+  --background-color: #000028;
+  --accent-color: #ff0070;
+  --hover-color: #ff007066;
+  --main-text: #000028;
+  --header-background: url(../images/cover-image-dark.png) center / cover
+    no-repeat;
+  --main-title: #db00ff;
+  --decoration-elem: inline-block;
+  --decorative-background: #ff0070;
+  --info-text: #f1b2ce;
 }

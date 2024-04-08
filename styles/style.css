@@ -7,7 +7,7 @@
   grid-template-columns: 1fr;
   justify-items: flex-end;
   position: relative;
-  background: var(--header-backgroun);
+  background: var(--header-background);
   width: 100%;
   min-height: 668px;
   height: 100vh;
@@ -90,7 +90,7 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--accent-color);
+  border-bottom-color: var(--accent-color);
 }
 
 .header__title {
@@ -171,7 +171,7 @@
 }
 
 .info__link:focus-visible {
-  border: 1px solid var(--info-text);
+  border-color: var(--info-text);
 }
 
 .info__recommendation {
